@@ -1,13 +1,8 @@
-// 1- لتسهيل الباك اندexpress اكواد جافا سكربت ولكنها تستخدم اطار
-
-// 2-  لازم استدعي الدالة ركويرnode_modules لستخدام مكتبة من 
 const express = require("express")
 const mongoose = require("mongoose")
 
-//لتلبية الطلبات ويعمل استجابة للعميلnode.js هنا انشاءت ويب سيرفر تبع 
 const app = express()
 
-//اذا بجيب شي من ملف اخر استخم ريكوير
 const Article = require("./models/Article")
 
 mongoose.connect("mongodb+srv://afnan2000:afnan4488@cluster0.cib7qao.mongodb.net/?retryWrites=true&w=majority")
@@ -17,7 +12,6 @@ mongoose.connect("mongodb+srv://afnan2000:afnan4488@cluster0.cib7qao.mongodb.net
         console.log("error with connecting with DB", error)
     })
 
-//استخدمت يوز على شين اقدر استخدم البودي براميتر
 app.use(express.json())
 
 app.get("/hello", (req, res) => {
