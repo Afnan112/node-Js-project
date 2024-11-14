@@ -5,7 +5,7 @@ const app = express()
 
 const Article = require("./models/Article")
 
-mongoose.connect("mongodb+srv://afnan2000:afnan4488@cluster0.cib7qao.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://<username>:<password>@cluster0.cib7qao.mongodb.net/?retryWrites=true&w=majority")
     .then(() => {
         console.log("connectinf successfly")
     }).catch((error) => {
